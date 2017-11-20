@@ -35,14 +35,20 @@ Future Work for the CESO includes testing at scale, Instantiation from an operat
 		- **ceso.ttl** - The Cyber Effects Simulation Ontology RDF File. 
 		- **cst.ttl** - The Cyber Simulation Terrain RDF File. 
 		- **tso.ttl** - The Threat Simulation Ontology RDF File.
-		- **cstUsecase.sparql** - The CST usecase presented at the 16th Australian Information Warfare Conference. 
-		- **cesoUsecase.sparql** - The CESO usecase file. 
+		- **cstUsecase.ttl** - The CST usecase presented at the 16th Australian Information Warfare Conference. 
+		- **cesoUsecase.ttl** - The CESO usecase file.
+		- **cstUsecase.sparql** - Competency questions, stardog query list and results of those queries (1/2)
+		- **cesoUsecase.sparql** - Competency questions, stardog query list and results of those queries (2/2)
 
 * Database configuration
-	+As Per the Stardog User Manual
+	+Refer to the stadog user manual. To instantiate this a command like: 
+	
+	*./stardog-admin db create -n EvalUsecase_DB ~/Cyber-Simulation-Terrain-master/v1-0/cyber/ceso.ttl ~/Cyber-Simulation-Terrain-master/v1-0/cyber/CyberSimulationTerrain/cst.ttl ~/Cyber-Simulation-Terrain-master/v1-0/cyber/ThreatSimulationOntology/tso.ttl ~/Cyber-Simulation-Terrain-master/v1-0/usecase/cesoUsecase.ttl ~/Cyber-Simulation-Terrain-master/v1-0/usecase/cstUsecase.ttl* 
+	
+	should be used, replacing ~ with the appropriate file path. This will create a database named Evalusecase_DB containing the CESO, CST and TSO ontology files and the cstUsecase and cesoUsecase instances. 
 
 * How to run tests
-	+See The SPARQL Files. They have examples of tests run using stardog. 
+	+See The SPARQL Files. They have examples of tests run using stardog. Note, you should copy and paste the Stardog queries from the .SPARQL files, they won't run as a .SPARQL file complete. 
 	
 * Deployment instructions
 
